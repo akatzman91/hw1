@@ -122,20 +122,20 @@ DROP TABLE IF EXISTS studios;
 -- TODO!
 
 CREATE TABLE actors (
-  actor_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   first_name TEXT,
   last_name TEXT
 );
 
 CREATE TABLE characters (
-  character_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   character_name TEXT,
   actor_id INTEGER,
   movie_id INTEGER
 );
 
 CREATE TABLE movies (
-  movie_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   title TEXT,
   year_released TEXT,
   mpaa_rating TEXT,
@@ -143,7 +143,7 @@ CREATE TABLE movies (
 );
 
 CREATE TABLE studios (
-  studio_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   studio_name TEXT
   );
 
@@ -192,6 +192,9 @@ VALUES (
 
 -- The SQL statement for the movies output
 -- TODO!
+
+SELECT
+FROM movies INNER JOIN studios ON movies.title = studio
 
 -- Prints a header for the cast output
 .print ""
