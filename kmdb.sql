@@ -131,9 +131,7 @@ CREATE TABLE characters (
   character_id INTEGER PRIMARY KEY AUTOINCREMENT,
   character_name TEXT,
   actor_id INTEGER,
-  movie_id INTEGER,
-  FOREIGN KEY (actor_id) REFERENCES actors (actor_id)
-  FOREIGN KEY (movie_id) REFERENCES movies (movie_id)
+  movie_id INTEGER
 );
 
 CREATE TABLE movies (
@@ -141,8 +139,7 @@ CREATE TABLE movies (
   title TEXT,
   year_released TEXT,
   mpaa_rating TEXT,
-  studio_id INTEGER,
-  FOREIGN KEY (studio_id) REFERENCES studios (studio_id)
+  studio_id INTEGER
 );
 
 CREATE TABLE studios (
@@ -163,19 +160,22 @@ VALUES (
 );
 
 INSERT INTO characters (
-  character_name
+  character_name,
+  actor_id,
+  movie_id
 )
 VALUES (
-  "Bruce Wayne"), ("Alfred"), ("Ra's Al Ghul"), ("Rachel Dawes"), ("Commissioner Gordon"), ("Joker"), ("Harvey Dent"), ("Bane"), ("John Blake"), ("Selina Kyle"
+  "Bruce Wayne","1","1,2,3"), ("Alfred","2","1,2"), ("Ra's Al Ghul","3","1"), ("Rachel Dawes","4","1"), ("Commissioner Gordon","5","1,3"), ("Joker","6","2"), ("Harvey Dent","7","2"), ("Rachel Dawes","8","2"), ("Bane","9","3"), ("John Blake","10","3"), ("Selina Kyle","11","3"
 );
 
 INSERT INTO movies (
   title,
   year_released,
-  mpaa_rating
+  mpaa_rating,
+  studio_id
 )
 VALUES (
-  "Batman Begins", "2005", "PG-13"), ("The Dark Knight", "2008", "PG-13"), ("The Dark Knight Rises", "2012", "PG-13"
+  "Batman Begins", "2005", "PG-13", "1"), ("The Dark Knight", "2008", "PG-13", "1"), ("The Dark Knight Rises", "2012", "PG-13", "1"
 );
 
 INSERT INTO studios (
