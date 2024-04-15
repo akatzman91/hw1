@@ -130,9 +130,8 @@ CREATE TABLE actors (
 
 CREATE TABLE characters (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  first_name TEXT,
-  last_name TEXT,
-  actor_id INTEGER
+  character_name TEXT,
+  actor_id INTEGER,
   movie_id INTEGER
 );
 
@@ -141,19 +140,67 @@ CREATE TABLE movies (
   title TEXT,
   year_released TEXT,
   mpaa_rating TEXT,
-  actor_id INTEGER
-  character_id INTEGER
-  movie_id INTEGER
+  actor_id INTEGER,
+  character_id INTEGER,
+  studio_id INTEGER
 );
 
 CREATE TABLE studios (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name TEXT,
+  studio_name TEXT
   );
 
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
+
+INSERT INTO actors (
+  first_name
+  last_name
+  movie_id
+)
+VALUES (
+  "Christian", "Michael", "Liam", "Katie", "Gary", "Heath", "Aaron", "Michael", "Maggie", "Tom", "Joseph", "Anne"
+  "Bale", "Caine", "Neeson", "Holmes", "Oldman", "Ledger", "Eckhart", "Caine", "Gyllenhaal", "Hardy", "Gordon-Levitt", "Hathaway"
+  movie_id**********
+);
+
+INSERT INTO characters (
+  character_name
+  actor_id
+  movie_id
+)
+VALUES (
+  "Bruce Wayne", "Alfred", "Ra's Al Ghul", "Rachel Dawes", "Commissioner Gordon", "Joker", "Harvey Dent", "Bane", "John Blake", "Selina Kyle"
+  actor_id**********
+  movie_id**********
+);
+
+INSERT INTO movies (
+  title
+  year_released
+  mpaa_rating
+  actor_id
+  character_id
+  studio_id
+)
+VALUES (
+  "Batman Begins", "The Dark Knight", "The Dark Knight Rises"
+  "2005", "2008", "2012"
+  "PG-13"
+  actor_id**********
+  character_id******
+  studio_id**********
+);
+
+INSERT INTO studios (
+  studio_name
+  movie_id
+)
+VALUES (
+  "Warner Bros"
+  movie_id**********
+);
 
 -- Prints a header for the movies output
 .print "Movies"
