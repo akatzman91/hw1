@@ -165,7 +165,7 @@ INSERT INTO characters (
   movie_id
 )
 VALUES (
-  "Bruce Wayne","1","1,2,3"), ("Alfred","2","1,2"), ("Ra's Al Ghul","3","1"), ("Rachel Dawes","4","1"), ("Commissioner Gordon","5","1,3"), ("Joker","6","2"), ("Harvey Dent","7","2"), ("Rachel Dawes","8","2"), ("Bane","9","3"), ("John Blake","10","3"), ("Selina Kyle","11","3"
+  "Bruce Wayne","1","1"), ("Bruce Wayne","1","2"), ("Bruce Wayne","1","3"), ("Alfred","2","1"), ("Alfred","2","2"), ("Ra's Al Ghul","3","1"), ("Rachel Dawes","4","1"), ("Commissioner Gordon","5","1"), ("Commissioner Gordon","5","3"), ("Joker","6","2"), ("Harvey Dent","7","2"), ("Rachel Dawes","8","2"), ("Bane","9","3"), ("John Blake","10","3"), ("Selina Kyle","11","3"
 );
 
 INSERT INTO movies (
