@@ -155,51 +155,34 @@ CREATE TABLE studios (
 -- TODO!
 
 INSERT INTO actors (
-  first_name
+  first_name,
   last_name
-  movie_id
 )
 VALUES (
-  "Christian", "Michael", "Liam", "Katie", "Gary", "Heath", "Aaron", "Michael", "Maggie", "Tom", "Joseph", "Anne"
-  "Bale", "Caine", "Neeson", "Holmes", "Oldman", "Ledger", "Eckhart", "Caine", "Gyllenhaal", "Hardy", "Gordon-Levitt", "Hathaway"
-  movie_id**********
+  "Christian", "Bale"), ("Michael", "Caine"), ("Liam", "Neeson"), ("Katie", "Holmes"), ("Gary", "Oldman"), ("Heath", "Ledger"), ("Aaron", "Eckhart"), ("Maggie", "Gyllenhaal"), ("Tom", "Hardy"), ("Joseph", "Gordon-Levitt"), ("Anne", "Hathaway"
 );
 
 INSERT INTO characters (
   character_name
-  actor_id
-  movie_id
 )
 VALUES (
-  "Bruce Wayne", "Alfred", "Ra's Al Ghul", "Rachel Dawes", "Commissioner Gordon", "Joker", "Harvey Dent", "Bane", "John Blake", "Selina Kyle"
-  actor_id**********
-  movie_id**********
+  "Bruce Wayne"), ("Alfred"), ("Ra's Al Ghul"), ("Rachel Dawes"), ("Commissioner Gordon"), ("Joker"), ("Harvey Dent"), ("Bane"), ("John Blake"), ("Selina Kyle"
 );
 
 INSERT INTO movies (
-  title
-  year_released
+  title,
+  year_released,
   mpaa_rating
-  actor_id
-  character_id
-  studio_id
 )
 VALUES (
-  "Batman Begins", "The Dark Knight", "The Dark Knight Rises"
-  "2005", "2008", "2012"
-  "PG-13"
-  actor_id**********
-  character_id******
-  studio_id**********
+  "Batman Begins", "2005", "PG-13"), ("The Dark Knight", "2008", "PG-13"), ("The Dark Knight Rises", "2012", "PG-13"
 );
 
 INSERT INTO studios (
   studio_name
-  movie_id
 )
 VALUES (
   "Warner Bros"
-  movie_id**********
 );
 
 -- Prints a header for the movies output
@@ -215,7 +198,6 @@ VALUES (
 .print "Top Cast"
 .print "========"
 .print ""
-
 
 -- The SQL statement for the cast output
 -- TODO!
