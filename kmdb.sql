@@ -182,7 +182,7 @@ INSERT INTO studios (
   studio_name
 )
 VALUES (
-  "Warner Bros"
+  "Warner Bros."
 );
 
 -- Prints a header for the movies output
@@ -194,8 +194,8 @@ VALUES (
 -- TODO!
 
 SELECT movies.title, movies.year_released, movies.mpaa_rating, studios.studio_name
-FROM movies INNTER JOIN studios ON movies.studio_id = studios.id
-WHERE movies.title = "Batman Begins"; "The Dark Knight"; "The Dark Knight Rises";
+FROM movies INNER JOIN studios ON movies.studio_id = studios.id
+WHERE movies.title = "Batman Begins" OR movies.title = "The Dark Knight" OR movies.title = "The Dark Knight Rises"; 
 
 -- Prints a header for the cast output
 .print ""
