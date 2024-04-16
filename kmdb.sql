@@ -205,3 +205,8 @@ WHERE movies.title = "Batman Begins" OR movies.title = "The Dark Knight" OR movi
 
 -- The SQL statement for the cast output
 -- TODO!
+
+SELECT movies.title, actors.first_name, actors.last_name, characters.character_name
+FROM movies INNER JOIN characters ON characters.movie_id = movies.id INNER JOIN actors ON characters.actor_id = actors.id
+WHERE movies.title = "Batman Begins" OR movies.title = "The Dark Knight" OR movies.title = "The Dark Knight Rises"
+ORDER BY movies.title;
