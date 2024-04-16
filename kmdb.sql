@@ -165,7 +165,7 @@ INSERT INTO characters (
   movie_id
 )
 VALUES (
-  "Bruce Wayne","1","1"), ("Bruce Wayne","1","2"), ("Bruce Wayne","1","3"), ("Alfred","2","1"), ("Alfred","2","2"), ("Ra's Al Ghul","3","1"), ("Rachel Dawes","4","1"), ("Commissioner Gordon","5","1"), ("Commissioner Gordon","5","3"), ("Joker","6","2"), ("Harvey Dent","7","2"), ("Rachel Dawes","8","2"), ("Bane","9","3"), ("John Blake","10","3"), ("Selina Kyle","11","3"
+  "Bruce Wayne",1,1), ("Bruce Wayne",1,2), ("Bruce Wayne",1,3), ("Alfred",2,1), ("Alfred",2,2), ("Ra's Al Ghul",3,1), ("Rachel Dawes",4,1), ("Commissioner Gordon",5,1), ("Commissioner Gordon",5,3), ("Joker",6,2), ("Harvey Dent",7,2), ("Rachel Dawes",8,2), ("Bane",9,3), ("John Blake",10,3), ("Selina Kyle",11,3
 );
 
 INSERT INTO movies (
@@ -175,7 +175,7 @@ INSERT INTO movies (
   studio_id
 )
 VALUES (
-  "Batman Begins", "2005", "PG-13", "1"), ("The Dark Knight", "2008", "PG-13", "1"), ("The Dark Knight Rises", "2012", "PG-13", "1"
+  "Batman Begins", "2005", "PG-13", 1), ("The Dark Knight", "2008", "PG-13", 1), ("The Dark Knight Rises", "2012", "PG-13", 1
 );
 
 INSERT INTO studios (
@@ -193,8 +193,9 @@ VALUES (
 -- The SQL statement for the movies output
 -- TODO!
 
-SELECT
-FROM movies INNER JOIN studios ON movies.title = studio
+SELECT movies.title, movies.year_released, movies.mpaa_rating, studios.studio_name
+FROM movies INNTER JOIN studios ON movies.studio_id = studios.id
+WHERE movies.title = "Batman Begins"; "The Dark Knight"; "The Dark Knight Rises";
 
 -- Prints a header for the cast output
 .print ""
